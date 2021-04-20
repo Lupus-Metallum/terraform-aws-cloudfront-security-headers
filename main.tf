@@ -72,6 +72,6 @@ resource "aws_lambda_function" "this" {
   publish          = true
   tags             = var.tags
   depends_on = [
-    data.archive_file.zip
+    data.archive_file.this
   ]
 }
