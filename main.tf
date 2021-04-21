@@ -55,7 +55,7 @@ resource "aws_iam_role_policy_attachment" "execution_role" {
 
 data "archive_file" "this" {
   type        = "zip"
-  source_file = "${path.module}/index.js"
+  source_file = "${path.module}/src/index.js"
   output_path = "${path.module}/deploy.zip"
 }
 
