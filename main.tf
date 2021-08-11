@@ -61,7 +61,7 @@ data "archive_file" "this" {
 
 resource "aws_lambda_function" "this" {
   function_name    = var.name
-  description      = "Adds security headers for Cloudfront"
+  description      = var.description
   filename         = data.archive_file.this.output_path
   source_code_hash = data.archive_file.this.output_base64sha256
   handler          = "index.handler"

@@ -9,6 +9,12 @@ variable "name" {
   description = "Name to use for resource names created by this module"
 }
 
+variable "description" {
+  type        = string
+  description = "Description to use for resource description created by this module"
+  default     = "Adds security headers for Cloudfront"
+}
+
 variable "timeout" {
   type        = number
   default     = 1
