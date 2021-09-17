@@ -38,6 +38,10 @@ exports.handler = (event, context, callback) => {
     if (addReferrerPolicy) {
         headers['referrer-policy'] = [{key: 'Referrer-Policy', value: '${referrer_policy_value}'}]; 
     }
+    const addFeaturePolicy = ${add_feature_policy}
+    if (addFeaturePolicy) {
+        headers['feature-policy'] = [{key: 'Feature-Policy', value: '${feature_policy_value}'}]; 
+    }
 
     //Return modified response
     callback(null, response);

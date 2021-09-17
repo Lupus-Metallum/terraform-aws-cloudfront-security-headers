@@ -74,6 +74,8 @@ data "archive_file" "this" {
       x_xss_protection_value             = var.x_xss_protection,
       add_referrer_policy                = length(var.referrer_policy) > 0 ? true : false,
       referrer_policy_value              = var.referrer_policy,
+      add_feature_policy                = length(var.feature_policy) > 0 ? true : false,
+      feature_policy_value              = var.feature_policy,
     })
     filename = "index.js"
   }

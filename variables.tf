@@ -74,3 +74,9 @@ variable "referrer_policy" {
   default     = ""
   description = "Value to use for the Referrer-Policy header, when not provided this header is omitted."
 }
+
+variable "feature_policy" {
+  type        = string
+  default     = ""
+  description = "Value to use for the Feature-Policy header, when not provided this header is omitted."
+}
