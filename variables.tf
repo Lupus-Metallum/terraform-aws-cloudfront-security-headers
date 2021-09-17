@@ -23,7 +23,7 @@ variable "timeout" {
 
 variable "memory_size" {
   type        = number
-  default     = 32
+  default     = 128
   description = "Memory to use for Lambda, defaults to 128mb"
 }
 
