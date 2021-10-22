@@ -1,10 +1,9 @@
-'use strict';
-exports.handler = (event, context, callback) => {
-    
-    //Get contents of response
-    const response = event.Records[0].cf.response;
-    const headers = response.headers;
+function handler(event) {
+    var response = event.response;
+    var headers = response.headers;
 
+    // Set HTTP security headers
+    // Since JavaScript doesnt allow for hyphens in variable names, we use the dict["key"] notation 
     //Set new headers 
     const addAccessControlAllowOrigin = ${add_access_control_allow_origin}
     if ( ${add_access_control_allow_origin} == true ) {
@@ -43,6 +42,6 @@ exports.handler = (event, context, callback) => {
         headers['feature-policy'] = [{key: 'Feature-Policy', value: '${feature_policy_value}'}]; 
     }
 
-    //Return modified response
-    callback(null, response);
-};
+    // Return the response to viewers 
+    return response;
+}

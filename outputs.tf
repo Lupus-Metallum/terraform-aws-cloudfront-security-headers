@@ -1,3 +1,3 @@
-output "lambda_arn" {
-  value = aws_lambda_function.this.qualified_arn
+output "arn" {
+  value = aws_cloudfront_function.this.arn
 }
