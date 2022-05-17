@@ -1,5 +1,7 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 # Local .terraform directories
 **/.terraform/*
+**/.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
@@ -21,9 +23,35 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Include override files you do wish to add to version control using negated pattern
-#
-# !example_override.tf
+# IDE Files
+.vscode/
 
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
+# Mac OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.zip
+Desktop.ini
+
+# Icon must end with two \r
+Icon
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Thumbnail cache files
+._*
+Thumbs.db
